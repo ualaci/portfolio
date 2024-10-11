@@ -10,7 +10,7 @@
 $receiving_email_address = 'contact@example.com';
 
 if (file_exists($php_email_form = '../assets/vendor/php-email-form/php-email-form.php')) {
-  include ($php_email_form);
+  include($php_email_form);
 } else {
   die('Unable to load the "PHP Email Form" Library!');
 }
@@ -42,7 +42,7 @@ $result = $contact->send();
 
 // Check if the email was sent successfully
 if ($result) {
-  // If successful, output a success message
+  // If successful, output a clean success message
   echo json_encode(array('ok' => true, 'message' => 'Your message has been sent. Thank you!'));
   exit; // Exit to prevent further output
 } else {
