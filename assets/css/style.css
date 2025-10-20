@@ -1104,3 +1104,22 @@ section {
     padding-right: 20px 15px;
   }
 }
+
+/* Correção para Link do Portfólio Clicável */
+.portfolio-wrap {
+  position: relative; /* Garante o contexto para posicionamento absoluto */
+}
+
+.portfolio-details-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2; /* Fica acima da imagem */
+  display: block; /* Ocupa todo o espaço */
+}
+
+.portfolio-wrap .portfolio-links {
+  z-index: 3; /* Fica acima do link principal para que os ícones sejam clicáveis */
+}
